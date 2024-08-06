@@ -12,12 +12,12 @@ public class Movimiento : MonoBehaviour
     Vector3 mov_y;
     Vector3 movimiento;
 
-    float VMouse; //Movimiento vertical del mouse en rotacion
+    //float VMouse; //Movimiento vertical del mouse en rotacion
     float HMouse; //Movimiento horizonatl del mouse en rotacion
-    float Yrotacion = 0.0f; //Variabke para guardar los cambios de rotacion
-    float Xrotacion = 0.0f; //Variabke para guardar los cambios de rotacion
+    //float Yrotacion = 0.0f; //Variabke para guardar los cambios de rotacion
+    //float Xrotacion = 0.0f; //Variabke para guardar los cambios de rotacion
     public float VelocidadHorizontal; //Sensibiliad del mouse en movimiento
-    public float VelocidadVertical; //Sensibiliad del mouse en movimiento
+    //public float VelocidadVertical; //Sensibiliad del mouse en movimiento
     Vector3 velocidad_angular;
 
     public Animator animator;
@@ -62,8 +62,6 @@ public class Movimiento : MonoBehaviour
         HMouse = Input.GetAxis("Mouse X") * VelocidadHorizontal;
 
         
-
-
         velocidad_angular = new Vector3(0, HMouse, 0);
         Quaternion deltaRotation = Quaternion.Euler(velocidad_angular * Time.deltaTime);
         RB.MoveRotation(RB.rotation * deltaRotation);
