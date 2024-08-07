@@ -1,0 +1,11 @@
+Model Information:
+* title:	Botchling Creature
+* source:	https://sketchfab.com/3d-models/botchling-creature-efacd8cdafe449cdb1dd93d4449f09b1
+* author:	Humesh (https://sketchfab.com/HumeshDilchund)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Botchling Creature" (https://sketchfab.com/3d-models/botchling-creature-efacd8cdafe449cdb1dd93d4449f09b1) by Humesh (https://sketchfab.com/HumeshDilchund) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -19,6 +19,7 @@ public class Movimiento : MonoBehaviour
     public float VelocidadHorizontal; //Sensibiliad del mouse en movimiento
     //public float VelocidadVertical; //Sensibiliad del mouse en movimiento
     Vector3 velocidad_angular;
+    private Transform cameraTransform;
 
     public Animator animator;
     private Rigidbody RB;
@@ -26,6 +27,7 @@ public class Movimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraTransform = Camera.main.transform;
         RB = GetComponent <Rigidbody>();
         animator = GetComponent<Animator>();
     }
@@ -59,12 +61,16 @@ public class Movimiento : MonoBehaviour
 
     void LookMouse () {
         //VMouse = Input.GetAxis("Mouse Y") * VelocidadVertical * Time.deltaTime;
+        Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y , 0);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, VelocidadHorizontal * Time.deltaTime);
+        /*
         HMouse = Input.GetAxis("Mouse X") * VelocidadHorizontal;
 
         
         velocidad_angular = new Vector3(0, HMouse, 0);
         Quaternion deltaRotation = Quaternion.Euler(velocidad_angular * Time.deltaTime);
         RB.MoveRotation(RB.rotation * deltaRotation);
+        */
 
         //Yrotacion -= VMouse;
         //Xrotacion += HMouse;
